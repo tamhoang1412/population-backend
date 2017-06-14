@@ -1,0 +1,17 @@
+@(previewPost: PreviewPost)
+
+<h3>
+  <a href="@routes.PostsController.viewPost(previewPost.id)">@previewPost.title</a>
+</h3>
+<p class="lead">
+    by @previewPost.author
+</p>
+<p>
+    <span class="glyphicon glyphicon-time"></span>
+    @previewPost.createAt
+</p>
+<p>@previewPost.content...</p>
+<a class="btn btn-primary" href="@routes.PostsController.viewPost(previewPost.id)">
+    Read More <span class="glyphicon glyphicon-chevron-right"></span>
+</a>
+<hr>

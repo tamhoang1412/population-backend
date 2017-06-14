@@ -1,0 +1,16 @@
+.post-form input[type="text"]{
+    width: 100%
+}
+
+.post-form textarea{
+    width: 100%;
+    height: 250px
+}
+
+form dd.info{
+    display: None;
+}
+
+.error{
+    color: red;
+}

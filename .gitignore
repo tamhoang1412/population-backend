@@ -1,0 +1,16 @@
+logs
+target
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings
+/RUNNING_PID
+.DS_Store
+app/.DS_Store
+conf/db/migration/default/.DS_Store
+conf/db/migration/.DS_Store
+conf/db/.DS_Store
+project/project/.DS_Store
+project/.DS_Store
+public/.DS_Store

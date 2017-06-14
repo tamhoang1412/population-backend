@@ -1,0 +1,15 @@
+@(username: Option[String], postDetail: PostDetail)
+@import org.joda.time.format.DateTimeFormat
+
+@main(postDetail.post.title, username){
+  <div class="col-lg-12 col-md-12 col-xs-12">
+    <h1>@postDetail.post.title</h1>
+    <p class="lead">
+      by @postDetail.author
+    </p>
+    <p><span class="glyphicon glyphicon-time"></span>  @DateTimeFormat.forPattern("dd-MM-yyyy HH:mm").print(postDetail.post.createdAt)</p>
+    <hr>
+    <p>@postDetail.post.content</p>
+    <hr>
+  </div>
+}

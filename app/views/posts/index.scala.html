@@ -1,0 +1,11 @@
+@(username: Option[String], message: String, previewPosts: List[PreviewPost])
+
+@main("All posts", username) {
+  <h2><i class="fa fa-star" aria-hidden="true"></i> All posts</h2>
+  <h3>@message</h3>
+  <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+    @for(post <- previewPosts) {
+      @views.html.posts.previewPost(post)
+    }
+  </div>
+}
