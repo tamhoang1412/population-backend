@@ -21,18 +21,7 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                @if(username == None){
-                    <li>
-                        <a href="@routes.AuthController.login"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
-                    </li>
-                } else{
-                    <li>
-                        <a>Welcome @username!</a>
-                    </li>
-                    <li>
-                        <a href="@routes.AuthController.logout"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
-                    </li>
-                }
+
             </ul>
         </div>
     </div>

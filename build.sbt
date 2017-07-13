@@ -26,7 +26,8 @@ libraryDependencies ++= Seq(
   "mysql" % "mysql-connector-java" % "5.1.38",
   "joda-time" % "joda-time" % "2.9.7",
   "org.skinny-framework" %% "skinny-factory-girl" % "2.3.5" % "test",
-  "org.mindrot" % "jbcrypt" % "0.3m"
+  "org.mindrot" % "jbcrypt" % "0.3m",
+  filters
 )
 
 scalacOptions in Test ++= Seq("-Yrangepos")

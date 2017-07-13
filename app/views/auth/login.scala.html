@@ -1,24 +1,0 @@
-@(username: Option[String], loginForm: Form[LoginForm])(implicit message: Messages, flash: Flash)
-@import helper._
-  @main("Login", username){
-
-    <h2>Login</h2>
-    @form(routes.AuthController.authenticate()) {
-      @loginForm.globalError.map { error =>
-        <p class="error">
-          @error.message
-        </p>
-      }
-      @flash.get("success").map { message =>
-        <p class="success">
-          @message
-        </p>
-      }
-      @inputText(loginForm("username"), '_label -> "Username", 'type -> "username",  'name ->"username", 'placeholder -> "Username", 'id -> "username")  
-      @inputText(loginForm("password"), '_label -> "Password", 'type -> "password",  'name -> "password",  'id -> "password", 'placeholder -> "Password")  
-      <div class="form-group">
-        <input class="btn btn-primary" type="submit" id="login-button" value="Login">
-      </div>
-
-    }
-  }
