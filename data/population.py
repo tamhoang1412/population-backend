@@ -9,7 +9,7 @@ def getCountryIdSelectSql (country_code):
 def getPopulationValue(population):
   return 'null' if population == '..' else str(population)
 
-with open('population.csv', 'rb') as csvfile:
+with open('population1960_2015.csv', 'rb') as csvfile:
   reader = csv.reader(csvfile)
   for row in reader:
     for year in years:

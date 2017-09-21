@@ -5,4 +5,5 @@ GET        /assets/*file        controllers.Assets.versioned(path="/public", fil
 GET        /                    controllers.CountryController.index
 GET        /country             controllers.CountryController.getAll
 GET        /population/:id      controllers.PopulationController.get(id: Long)
+GET        /area/:id            controllers.AreaController.get(id: Long)
 

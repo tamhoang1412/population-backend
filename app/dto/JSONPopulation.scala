@@ -9,8 +9,6 @@ object JSONPopulation {
       case None => JsNull
       case _ =>
         val populationSeq = Seq(
-          "id" -> JsNumber(population.get.id),
-          "country_id" -> JsNumber(population.get.country_id),
           "year" -> JsNumber(population.get.year),
           "population" -> JsNumber(population.get.population)
         )
@@ -20,5 +18,13 @@ object JSONPopulation {
 
   def convertList(population: List[Population]): JsArray = {
     JsArray(population.map(p => convert(Option(p))))
+  }
+
+  def countryToJson(countryName: String, population: List[Population]): JsValue = {
+    val populationSeq = Seq(
+      "name" -> JsString(countryName),
+      "population" -> convertList(population)
+    )
+    JsObject(populationSeq)
   }
 }
