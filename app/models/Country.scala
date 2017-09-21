@@ -6,7 +6,8 @@ import skinny.orm.SkinnyCRUDMapper
 case class Country(
   id: Long,
   name: String,
-  code: String
+  code: String,
+  codeAlpha2: String
 )
 
 object Country extends SkinnyCRUDMapper[Country] {
@@ -16,6 +17,7 @@ object Country extends SkinnyCRUDMapper[Country] {
   override def extract(rs: WrappedResultSet, n: scalikejdbc.ResultName[Country]): Country = Country(
     id = rs.long(n.id),
     name = rs.string(n.name),
-    code = rs.string(n.code)
+    code = rs.string(n.code),
+    codeAlpha2 = rs.string(n.codeAlpha2)
   )
 }
