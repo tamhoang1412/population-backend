@@ -11,7 +11,8 @@ object JSONCountry {
         val countrySeq = Seq(
           "id" -> JsNumber(country.get.id),
           "name" -> JsString(country.get.name),
-          "code" -> JsString(country.get.code)
+          "code" -> JsString(country.get.code),
+          "code_alpha2" -> JsString(country.get.codeAlpha2)
         )
         JsObject(countrySeq)
     }
