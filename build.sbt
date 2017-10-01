@@ -27,7 +27,8 @@ libraryDependencies ++= Seq(
   "joda-time" % "joda-time" % "2.9.7",
   "org.skinny-framework" %% "skinny-factory-girl" % "2.3.5" % "test",
   "org.mindrot" % "jbcrypt" % "0.3m",
-  filters
+  filters,
+  ws
 )
 
 scalacOptions in Test ++= Seq("-Yrangepos")
