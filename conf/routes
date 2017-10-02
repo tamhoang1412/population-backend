@@ -6,4 +6,8 @@ GET        /                    controllers.CountryController.index
 GET        /country             controllers.CountryController.getAll
 GET        /population/:id      controllers.PopulationController.get(id: Long)
 GET        /area/:id            controllers.AreaController.get(id: Long)
+POST       /login               controllers.LoginController.loginWithGoogleToken
+
+GET        /getUserByAccessToken    controllers.LoginController.loginWithAccessToken(token: String)
+GET        /logout                  controllers.LoginController.logout(token: String)
 
